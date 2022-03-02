@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import * as actionTypes from '../../store/action-types';
 
+import { counterActions } from '../../store/counter-slice';
 import styles from './Counter.module.css';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
@@ -11,23 +11,23 @@ const Counter = () => {
   const show = useSelector((state) => state.showCounter);
 
   const incrementHandler = () => {
-    dispatch({ type: actionTypes.INCREMENT });
+    dispatch(counterActions.increment());
   };
 
   const increaseHandler = () => {
-    dispatch({ type: actionTypes.INCREASE, amount: 5 });
+    dispatch(counterActions.increase(5));
   };
 
   const decrementHandler = () => {
-    dispatch({ type: actionTypes.DECREMENT });
+    dispatch(counterActions.decrement());
   };
 
   const decreaseHandler = () => {
-    dispatch({ type: actionTypes.DECREASE, amount: 5 });
+    dispatch(counterActions.decrease(5));
   };
 
   const toggleCounterHandler = () => {
-    dispatch({ type: actionTypes.TOGGLE });
+    dispatch(counterActions.toggleCounter());
   };
 
   return (
