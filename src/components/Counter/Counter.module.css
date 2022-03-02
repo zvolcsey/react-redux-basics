@@ -6,8 +6,9 @@
   padding: 1rem;
 }
 
-.counter__title {
+.counter h1 {
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .counter__value {
@@ -17,23 +18,32 @@
   margin: 2.5rem 0;
 }
 
-.counter button {
-  font: inherit;
+.counter__actions {
+  margin-bottom: 1rem;
+}
+
+.counter__actions button {
+  margin-right: 1rem;
+}
+
+.counter__actions button:last-of-type {
+  margin: 0;
+}
+
+.counter__button {
   background: #4b00ad;
   color: #fff;
   border: 2px solid #4b00ad;
   border-radius: 0.3rem;
-  padding: 0.4rem 1rem;
-  cursor: pointer;
 }
 
-.counter button:hover,
-.counter button:active {
+.counter__button:hover,
+.counter__button:active {
   background: #5413a8;
   border-color: #5413a8;
 }
 
-.counter button:focus {
+.counter__button:focus {
   outline: none;
   background: #5413a8;
   border-color: #5413a8;
