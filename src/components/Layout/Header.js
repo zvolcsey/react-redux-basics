@@ -7,7 +7,7 @@ import styles from './Header.module.css';
 const Header = () => {
   const dispatch = useDispatch();
 
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isAuth = useSelector((state) => state.auth.isAuthenticated);
 
   const logoutHandler = () => {
     dispatch(authActions.logout());
@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className={styles['main-header']}>
       <h1>Redux Auth</h1>
-      {isAuthenticated && (
+      {isAuth && (
         <nav className={styles['main-nav']}>
           <ul className={styles['main-nav__list']}>
             <li className={styles['main-nav__item']}>My Products</li>

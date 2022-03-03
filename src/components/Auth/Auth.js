@@ -15,7 +15,7 @@ const Auth = () => {
   const enteredUsernameRef = useRef();
   const enteredPasswordRef = useRef();
 
-  const submitFormHandler = (event) => {
+  const loginHandler = (event) => {
     event.preventDefault();
 
     const enteredUsername = enteredUsernameRef.current.value;
@@ -69,23 +69,27 @@ const Auth = () => {
   );
 
   return (
-    <Card className={styles['auth']}>
-      <form onSubmit={submitFormHandler}>
-        <div className={styles['form-control']}>
-          <label htmlFor='username'>Username</label>
-          {usernameErrorMessage}
-          <input type='text' id='username' ref={enteredUsernameRef} />
-        </div>
-        <div className={styles['form-control']}>
-          <label htmlFor='password'>Password</label>
-          {passwordErrorMessage}
-          <input type='password' id='password' ref={enteredPasswordRef} />
-        </div>
-        <PrimaryButton type='submit' className={styles['form__button']}>
-          Login
-        </PrimaryButton>
-      </form>
-    </Card>
+    <main>
+      <section>
+        <Card className={styles['auth']}>
+          <form onSubmit={loginHandler}>
+            <div className={styles['form-control']}>
+              <label htmlFor='username'>Username</label>
+              {usernameErrorMessage}
+              <input type='text' id='username' ref={enteredUsernameRef} />
+            </div>
+            <div className={styles['form-control']}>
+              <label htmlFor='password'>Password</label>
+              {passwordErrorMessage}
+              <input type='password' id='password' ref={enteredPasswordRef} />
+            </div>
+            <PrimaryButton type='submit' className={styles['form__button']}>
+              Login
+            </PrimaryButton>
+          </form>
+        </Card>
+      </section>
+    </main>
   );
 };
 

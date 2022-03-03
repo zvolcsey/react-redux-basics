@@ -6,14 +6,14 @@ import Auth from './components/Auth/Auth';
 import UserProfile from './components/User/UserProfile';
 
 const App = () => {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isAuth = useSelector((state) => state.auth.isAuthenticated);
 
   return (
     <>
       <Header />
-      {!isAuthenticated && <Auth />}
-      {isAuthenticated && <UserProfile />}
-      {isAuthenticated && <Counter />}
+      {!isAuth && <Auth />}
+      {isAuth && <UserProfile />}
+      {isAuth && <Counter />}
     </>
   );
 };
