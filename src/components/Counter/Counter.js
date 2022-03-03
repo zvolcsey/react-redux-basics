@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { counterActions } from '../../store/counter-slice';
 import styles from './Counter.module.css';
 import Card from '../UI/Card';
-import Button from '../UI/Button';
+import PrimaryButton from '../UI/PrimaryButton';
 
 const Counter = () => {
   const dispatch = useDispatch();
@@ -36,38 +36,38 @@ const Counter = () => {
         <h1 className={styles['counter__title']}>REDUX COUNTER</h1>
         {show && <div className={styles['counter__value']}>{counter}</div>}
         <div className={styles['counter__actions']}>
-          <Button
+          <PrimaryButton
             className={styles['counter__button']}
             onClick={decreaseHandler}
           >
             -5
-          </Button>
-          <Button
+          </PrimaryButton>
+          <PrimaryButton
             className={styles['counter__button']}
             onClick={decrementHandler}
           >
             -
-          </Button>
+          </PrimaryButton>
 
-          <Button
+          <PrimaryButton
             className={styles['counter__button']}
             onClick={incrementHandler}
           >
             +
-          </Button>
-          <Button
+          </PrimaryButton>
+          <PrimaryButton
             className={styles['counter__button']}
             onClick={increaseHandler}
           >
             +5
-          </Button>
+          </PrimaryButton>
         </div>
-        <Button
+        <PrimaryButton
           className={styles['counter__button']}
           onClick={toggleCounterHandler}
         >
           Toggle Counter
-        </Button>
+        </PrimaryButton>
       </Card>
     </main>
   );
