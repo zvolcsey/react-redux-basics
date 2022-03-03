@@ -1,0 +1,38 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #4b00ad;
+  color: #fff;
+  z-index: 10;
+}
+
+.main-header h1 {
+  font-size: 1.3rem;
+}
+
+.main-nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-nav__item {
+  margin-right: 1rem;
+}
+
+.main-nav__item:last-of-type {
+  margin: 0;
+}
+
+@media (min-width: 40rem) {
+  .main-header h1 {
+    font-size: 2rem;
+  }
+}

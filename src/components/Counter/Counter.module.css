@@ -1,9 +1,9 @@
 .counter {
-  margin: 5rem auto;
+  margin: 2rem auto 0 auto;
   width: 90%;
   max-width: 40rem;
-  text-align: center;
   padding: 1rem;
+  text-align: center;
 }
 
 .counter h1 {

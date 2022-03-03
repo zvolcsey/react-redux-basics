@@ -1,0 +1,18 @@
+.primary-button {
+  background: #4b00ad;
+  color: #fff;
+  border: 2px solid #4b00ad;
+  border-radius: 0.3rem;
+}
+
+.primary-button:hover,
+.primary-button:active {
+  background: #5413a8;
+  border-color: #5413a8;
+}
+
+.primary-button:focus {
+  outline: none;
+  background: #5413a8;
+  border-color: #5413a8;
+}
