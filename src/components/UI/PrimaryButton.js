@@ -4,6 +4,7 @@ import styles from './PrimaryButton.module.css';
 const PrimaryButton = (props) => {
   return (
     <Button
+      type={props.type || 'button'}
       className={`${styles['primary-button']} ${props.className}`}
       onClick={props.onClick}
     >

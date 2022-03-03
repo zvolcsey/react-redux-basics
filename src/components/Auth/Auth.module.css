@@ -1,6 +1,6 @@
 .auth {
   margin: 3rem auto 0 auto;
-  padding: 1rem;
+  padding: 1.3rem;
   width: 90%;
   max-width: 40rem;
   text-align: center;
@@ -23,12 +23,30 @@
   align-self: flex-start;
   color: #575757;
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .form-control input {
   font: inherit;
   width: 100%;
   padding: 0.4rem 0.3rem;
+  border: 1px solid #575757;
+  border-radius: 0.3rem;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #4b00ad;
+}
+
+.form-control__message {
+  align-self: flex-start;
+  font-size: 0.9rem;
+}
+
+.form-control__message--error {
+  margin-bottom: 0.5rem;
+  color: red;
 }
 
 .form__button {
